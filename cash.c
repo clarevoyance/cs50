@@ -1,10 +1,11 @@
-#include <cs50.h>
 #include <stdio.h>
+#include <cs50.h>
 #include <math.h>
 
 int main(void)
 {
     int cents_owed;
+
     do
     {
         float dollars_owed = get_float("Change owed: ");
