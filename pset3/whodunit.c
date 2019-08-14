@@ -1,4 +1,4 @@
-// Copies a BMP file
+// adds a red filter
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
             
-            // remove red pixels in bmp
+            // removes all green and blue pixels
             if (triple.rgbtRed == 0xff)
             {    
                 triple.rgbtRed = 0xff;
