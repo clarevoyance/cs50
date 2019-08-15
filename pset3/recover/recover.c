@@ -13,16 +13,20 @@ int main(int argc, char *argv[])
     // remember filenames
     char *raw_file = argv[1];
     FILE *file_ptr = fopen(raw_file, "r");
+
+    // if raw file could not be opened
     if (file_ptr == NULL)
     {
         fprintf(stderr, "Could not open %s.\n", raw_file);
         return 2;
     }
 
+    // memory allocation
     unsigned char *buffer = malloc(512);
     int jpg_number = 0;
     FILE *img;
 
+    // read raw file
     while (fread(buffer, 512, 1, file_ptr))
     {
         // new jpg found
@@ -51,6 +55,7 @@ int main(int argc, char *argv[])
                 return 3;
             }
 
+            // check for every jpg file
             jpg_number++;
         }
 
@@ -64,9 +69,11 @@ int main(int argc, char *argv[])
         fwrite(buffer, 512, 1, img);
     }
 
-    // close image and free memory
+    // close image 
     fclose(file_ptr);
     fclose(img);
+
+    // free memory
     free(buffer);
 
     return 0;
