@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 
     // remember size multiplier
-    int n = atoi(argv[1]);
+    int n = atoi(argv[1]); 
 
     // remember filenames
     char *infile = argv[2];
@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-            // create a new scanline in a temporary array
+            // create a new scanline in a tempo rary array
             for (int k = 0; k < n; k++)
             {
                 scanline[(j * n) + k] = triple;
