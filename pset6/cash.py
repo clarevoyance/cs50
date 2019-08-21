@@ -16,5 +16,5 @@ def main():
 
     print(f"{quarters + dimes + nickels + pennies}")
 
-__name__ = "__main__":
+if __name__ == "__main__":
     main()

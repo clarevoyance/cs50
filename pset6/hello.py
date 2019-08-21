@@ -7,5 +7,5 @@ def main():
     print("hello, " + name)
 
 
-__name__ = "__main__":
+if __name__ == "__main__":
     main()
