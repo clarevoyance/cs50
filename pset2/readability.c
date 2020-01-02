@@ -6,7 +6,9 @@
 int main(void)
 {
     string text = get_string("Text:")
-    for (int i = 0, n = strlen(text); i <= nl i++)
+
+    int lettercount = 0;
+    for (int i = 0, n = strlen(text); i <= n i++)
     {
         
     }
