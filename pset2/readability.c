@@ -8,8 +8,16 @@ int main(void)
     string text = get_string("Text:")
 
     int lettercount = 0;
-    for (int i = 0, n = strlen(text); i <= n i++)
+    for (int i = 0, n = strlen(text); i <= n; i++)
     {
+        if (i != char " ")
+        {
+            lettercount += 1;
+        }
+        else
+        {
+            lettercount += 0;
+        }
         
     }
 
