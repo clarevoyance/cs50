@@ -3,5 +3,11 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"settings": {
+		"files.associations": {
+			"*.rmd": "markdown",
+			"string.h": "c"
+		}
+	}
 }
