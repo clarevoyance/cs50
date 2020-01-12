@@ -14,7 +14,7 @@ int main(void)
         char l = text[i];
         if ((l >= 97 && l < 123) || (l >= 65 && l < 91))
         {
-            lettercount += 1;
+            lettercount++;
         }
     }
 
@@ -25,7 +25,7 @@ int main(void)
         char w = text[j];
         if (isspace(w))
         {
-            wordcount += 1;
+            wordcount++;
         }
     }
 
@@ -36,7 +36,7 @@ int main(void)
         char s = text[k];
         if (s == 33 || s == 46 || s == 63)
         {
-            sentencecount += 1;
+            sentencecount++;
         }
     }
 
