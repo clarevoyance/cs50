@@ -6,15 +6,45 @@ def main():
         print("Usage: python dna.py data.csv sequence.txt")
 
     else:
-        with open(argv[1], newline='') as csvfile:
-            db = csv.reader(csvfile, delimiter = ' ', quotechar = "|")
-        print(db)
+
+        # Read csv file into dictionary
+        dbfile = open(argv[1], "r")
+        dbread = dbfile.readlines()
+        dbdict = {}
+        dblist = []
+        
+        for item in dbread:
+            entry = item.split(",")
+            entry[-1] = entry[-1].strip("\n")
+            dblist.append(entry)
+
+        for item in dblist[1:]:
+            dbvalues = {}
+            for i in range(1, len(item)):
+                dbvalues[dblist[0][i]] = item[i]
+            dbdict[item[0]] = dbvalues
+
+        dbfile.close()
 
 
-        s = open(argv[2], "r")
-        seq = s.read()
+        # Read sequence into list
+        seqfile = open(argv[2], "r")
+        seqlist = []
 
+        seq = seqfile.readlines()
+        seqstr = ""
+        for i in seq:
+            seqstr += i
+            
+        for i in seqstr:
+            seqlist.append(i)
 
+        seqfile.close()
+
+        # Tabulating counts
+        for i in seqlist:
+            
+            
 
 
 
