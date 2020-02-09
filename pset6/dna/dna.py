@@ -42,11 +42,7 @@ def main():
         seqfile.close()
 
         # Tabulating counts
-        for i in seqlist:
+        
             
-            
-
-
-
 if __name__ == "__main__":
     main()
