@@ -29,16 +29,14 @@ def main():
 
         # Read sequence into list
         seqfile = open(argv[2], "r")
-        seqlist = []
+        
 
         seq = seqfile.readlines()
         seqstr = ""
         for i in seq:
             seqstr += i
-            
-        for i in seqstr:
-            seqlist.append(i)
 
+        seqlist = [i for i in seqstr]            
         seqfile.close()
 
         # Tabulating counts
